@@ -1,7 +1,6 @@
 package main.java.methodsForTesting;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class FindTime {
 
@@ -12,22 +11,27 @@ public class FindTime {
         ArrayList array = (ArrayList) effectiveAlgorithms.setBiggerArray();
 
         ArrayList durationsForLast = effectiveAlgorithms.calculateThetime(array);
-        giveMean(effectiveAlgorithms, durationsForLast);
+        ArrayList trimmedResultsForLast = effectiveAlgorithms.rejectTopAndBottom5Percent(durationsForLast);
+        giveMedian(effectiveAlgorithms, trimmedResultsForLast);
 
         ArrayList durationsForReverse = effectiveAlgorithms.calculateThetimeForreverse(array);
-        giveMean(effectiveAlgorithms, durationsForReverse);
+        ArrayList trimmedResultsForReverse = effectiveAlgorithms.rejectTopAndBottom5Percent(durationsForReverse);
+        giveMedian(effectiveAlgorithms, trimmedResultsForReverse);
 
         ArrayList durationsForShuffle = effectiveAlgorithms.calculateThetimeForShuffle(array);
-        giveMean(effectiveAlgorithms, durationsForShuffle);
+        ArrayList trimmedResultsForShuffle = effectiveAlgorithms.rejectTopAndBottom5Percent(durationsForShuffle);
+        giveMedian(effectiveAlgorithms, trimmedResultsForShuffle);
 
         ArrayList durationsForSort = effectiveAlgorithms.calculateThetimeForSort(array);
-        giveMean(effectiveAlgorithms, durationsForSort);
+        ArrayList trimmedResultsForSort = effectiveAlgorithms.rejectTopAndBottom5Percent(durationsForSort);
+        System.out.println(trimmedResultsForSort);
+        giveMedian(effectiveAlgorithms, trimmedResultsForSort);
 
     }
 
-    private static void giveMean(ExecutionTime effectiveAlgorithms, ArrayList durationsForMethod) {
-        long mean = effectiveAlgorithms.finalTime(durationsForMethod);
-        effectiveAlgorithms.printMean(mean);
+    private static void giveMedian(ExecutionTime effectiveAlgorithms, ArrayList durationsForMethod) {
+        long median = effectiveAlgorithms.finalTime(durationsForMethod);
+        effectiveAlgorithms.printMedian(median);
         System.out.println("*******************");
     }
 
