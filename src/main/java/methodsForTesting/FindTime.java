@@ -8,7 +8,8 @@ public class FindTime {
     public static void main(String[] args) {
 
         ExecutionTime effectiveAlgorithms = new ExecutionTime();
-        ArrayList array = (ArrayList) effectiveAlgorithms.setBiggerArray();
+        SizeArrayPrinter myArrays = new SizeArrayPrinter();
+        ArrayList array = (ArrayList) myArrays.setBiggerArray(10000);
 
         ArrayList durationsForLast = effectiveAlgorithms.calculateThetime(array);
         ArrayList trimmedResultsForLast = effectiveAlgorithms.rejectTopAndBottom5Percent(durationsForLast);
@@ -26,6 +27,8 @@ public class FindTime {
         ArrayList trimmedResultsForSort = effectiveAlgorithms.rejectTopAndBottom5Percent(durationsForSort);
         System.out.println(trimmedResultsForSort);
         giveMedian(effectiveAlgorithms, trimmedResultsForSort);
+
+        System.out.println(myArrays.giveMedianForArraySizes(5000, 50000, 5000, effectiveAlgorithms));
 
     }
 

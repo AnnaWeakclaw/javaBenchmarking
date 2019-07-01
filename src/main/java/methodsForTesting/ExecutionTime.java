@@ -1,11 +1,7 @@
 package main.java.methodsForTesting;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class ExecutionTime {
 
@@ -24,16 +20,6 @@ public class ExecutionTime {
 
         }
         return durations;
-    }
-
-    ArrayList setTheArrayUp() {
-        return new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
-    }
-
-    List setBiggerArray() {
-        List<Integer> range = IntStream.rangeClosed(1, 10000)
-                .boxed().collect(Collectors.toList());
-        return range;
     }
 
     long finalTime(ArrayList durations) {
