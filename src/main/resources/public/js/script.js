@@ -37,7 +37,9 @@ function init() {
                 labels: sizes,
                 datasets: [
                     {
-                        data: times
+                        data: times,
+                        label: "Median times",
+                        borderColor: "#3e95cd"
                     }
                 ]
             }
