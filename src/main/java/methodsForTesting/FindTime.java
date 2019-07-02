@@ -13,7 +13,7 @@ public class FindTime {
 
 
     public static void main(String[] args) throws IOException {
-
+        staticFiles.location("/public");
 
         ExecutionTime effectiveAlgorithms = new ExecutionTime();
         SizeArrayPrinter myArrays = new SizeArrayPrinter();
@@ -39,8 +39,12 @@ public class FindTime {
         System.out.println(myArrays.giveMedianForArraySizes(5000, 50000, 5000, effectiveAlgorithms));
 
         HashMap trialData = myArrays.giveMedianForArraySizes(5000, 50000, 5000, effectiveAlgorithms);
+
         returnMyJson(trialData);
-        get("/hello", (req, res) -> "Hello World");
+        get("/hello", "application/json", (request, response) -> {
+            response.redirect("/index.html");
+            return null;
+        });
 
     }
 
