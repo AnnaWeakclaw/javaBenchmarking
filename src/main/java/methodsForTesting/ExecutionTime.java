@@ -1,4 +1,4 @@
-package methodsForTesting;
+package main.java.methodsForTesting;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,7 +31,7 @@ public class ExecutionTime {
         System.out.println("Median for time is: " + median);
     }
 
-    ArrayList calculateThetimeForreverse(ArrayList arrayUnderTesting) {
+    public ArrayList calculateThetimeForreverse(ArrayList arrayUnderTesting) {
         ArrayList durations = new ArrayList();
         for (int i = 0; i < 10; i++) {
             long startTime = System.nanoTime();
@@ -61,7 +61,7 @@ public class ExecutionTime {
         return durations;
     }
 
-    ArrayList calculateThetimeForSort(ArrayList arrayUnderTesting) {
+    public ArrayList calculateThetimeForSort(ArrayList arrayUnderTesting) {
         ArrayList durations = new ArrayList();
         ArrayList dontChangeMyArray = arrayUnderTesting;
         Collections.shuffle(arrayUnderTesting);

@@ -1,10 +1,10 @@
-package methodsForTesting;
+package main.java.methodsForTesting;
 
 import java.util.ArrayList;
 
-class CalculateMedian {
+public class CalculateMedian {
 
-    long yourMedianIs(ArrayList<Long> sortedArrayOfNumbers) {
+    public long yourMedianIs(ArrayList<Long> sortedArrayOfNumbers) {
         if (sortedArrayOfNumbers.size() % 2 == 0)
            return (sortedArrayOfNumbers.get(sortedArrayOfNumbers.size() / 2) + sortedArrayOfNumbers.get(sortedArrayOfNumbers.size() / 2 - 1)) / 2;
         else
