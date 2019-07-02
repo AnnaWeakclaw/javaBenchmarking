@@ -55,7 +55,7 @@ public class FindTime {
     }
     public static void returnMyJson(HashMap myData) throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
-        objectMapper.writeValue(new File("map.json"), myData );
+        objectMapper.writeValue(new File("src/main/resources/public/js/mymap.json"), myData );
     }
 
 }
