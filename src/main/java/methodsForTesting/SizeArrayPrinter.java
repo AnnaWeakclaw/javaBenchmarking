@@ -31,7 +31,7 @@ public class SizeArrayPrinter {
 
         for (int i = startHere; i <= finishHere; i += step) {
             ArrayList array = (ArrayList) setBiggerArray(i);
-            ArrayList durations = executionTime.calculateThetimeForShuffle(array);
+            ArrayList durations = executionTime.calculateThetime(array);
 
             ArrayList trimmedDurations = executionTime.rejectTopAndBottom5Percent(durations);
             long medianTime = executionTime.finalTime(trimmedDurations);

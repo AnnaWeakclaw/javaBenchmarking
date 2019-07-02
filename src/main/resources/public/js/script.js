@@ -1,14 +1,10 @@
 console.log("in js file");
 
-// Our labels along the x-axis
-var years = [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050];
-// For drawing the lines
-var africa = [86,114,106,106,107,111,133,221,783,2478];
-
 var ctx = document.getElementById("myChart");
 console.log(ctx);
 
-
+// The loading of a .json file from harddisk is an asynchronous operation and thus it needs to specify
+// a callback function to execute after the file is loaded.
 function loadJSON(callback) {
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");

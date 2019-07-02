@@ -8,7 +8,7 @@ public class ExecutionTime {
 
     public ArrayList calculateThetime(ArrayList arrayUnderTesting) {
         ArrayList durations = new ArrayList();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             long startTime = System.nanoTime();
             //get last element
             arrayUnderTesting.get(arrayUnderTesting.size() - 1);
@@ -33,7 +33,7 @@ public class ExecutionTime {
 
     public ArrayList calculateThetimeForreverse(ArrayList arrayUnderTesting) {
         ArrayList durations = new ArrayList();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             long startTime = System.nanoTime();
             //reverse the array
             Collections.reverse(arrayUnderTesting);
@@ -48,7 +48,7 @@ public class ExecutionTime {
 
     public ArrayList calculateThetimeForShuffle(ArrayList arrayUnderTesting) {
         ArrayList durations = new ArrayList();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             long startTime = System.nanoTime();
             //shuffle the array
             Collections.shuffle(arrayUnderTesting);
@@ -66,7 +66,7 @@ public class ExecutionTime {
         ArrayList dontChangeMyArray = arrayUnderTesting;
         Collections.shuffle(arrayUnderTesting);
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             long startTime = System.nanoTime();
             //sort the array
             Collections.sort(arrayUnderTesting);
