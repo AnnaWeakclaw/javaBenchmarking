@@ -1,4 +1,4 @@
-package main.java.methodsForTesting;
+package methodsForTesting;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,4 +33,6 @@ public class SizeArrayPrinter {
 
         return medianTimeToSize;
     }
+
+//    public JsonObject d = new JsonObject();
 }

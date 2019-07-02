@@ -1,4 +1,4 @@
-package main.java.methodsForTesting;
+package methodsForTesting;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,7 +22,7 @@ public class ExecutionTime {
         return durations;
     }
 
-    long finalTime(ArrayList durations) {
+    public long finalTime(ArrayList durations) {
         CalculateMedian median = new CalculateMedian();
         return median.yourMedianIs(durations);
     }
@@ -46,7 +46,7 @@ public class ExecutionTime {
         return durations;
     }
 
-    ArrayList calculateThetimeForShuffle(ArrayList arrayUnderTesting) {
+    public ArrayList calculateThetimeForShuffle(ArrayList arrayUnderTesting) {
         ArrayList durations = new ArrayList();
         for (int i = 0; i < 10; i++) {
             long startTime = System.nanoTime();
