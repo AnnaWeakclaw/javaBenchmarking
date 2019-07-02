@@ -1,7 +1,10 @@
 package main.java.methodsForTesting;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import main.java.methodsForTesting.ExecutionTime;
+import org.json.JSONObject;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -10,6 +13,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class SizeArrayPrinter {
+
+
 
     ArrayList setTheArrayUp() {
         return new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
@@ -36,5 +41,4 @@ public class SizeArrayPrinter {
         return medianTimeToSize;
     }
 
-//    public JsonObject d = new JsonObject();
 }

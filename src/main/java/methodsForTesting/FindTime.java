@@ -1,11 +1,19 @@
 package main.java.methodsForTesting;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import static spark.Spark.*;
 
 public class FindTime {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
 
         ExecutionTime effectiveAlgorithms = new ExecutionTime();
         SizeArrayPrinter myArrays = new SizeArrayPrinter();
@@ -30,6 +38,10 @@ public class FindTime {
 
         System.out.println(myArrays.giveMedianForArraySizes(5000, 50000, 5000, effectiveAlgorithms));
 
+        HashMap trialData = myArrays.giveMedianForArraySizes(5000, 50000, 5000, effectiveAlgorithms);
+        returnMyJson(trialData);
+        get("/hello", (req, res) -> "Hello World");
+
     }
 
     private static void giveMedian(ExecutionTime effectiveAlgorithms, ArrayList durationsForMethod) {
@@ -37,6 +49,9 @@ public class FindTime {
         effectiveAlgorithms.printMedian(median);
         System.out.println("*******************");
     }
-
+    public static void returnMyJson(HashMap myData) throws IOException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.writeValue(new File("map.json"), myData );
+    }
 
 }
