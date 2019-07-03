@@ -38,7 +38,7 @@ public class FindTime {
 
 //        System.out.println(myArrays.giveMedianForArraySizes(5000, 100000, 10000, effectiveAlgorithms));
 
-        HashMap trialData = myArrays.giveMedianForArraySizes(5000, 100000, 10000, effectiveAlgorithms);
+        HashMap trialData = myArrays.giveMedianForArraySizes(5000, 1000000, 100000, effectiveAlgorithms);
 
         returnMyJson(trialData);
         //how do I wait for the file to be updated?
