@@ -34,10 +34,32 @@ function init() {
                 datasets: [
                     {
                         data: times,
-                        label: "Median times",
+                        label: "My tested function",
                         borderColor: "#3e95cd"
                     }
                 ]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Median times'
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            beginAtZero: false
+                        },
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Tested array size'
+                        }
+                    }]
+                }
             }
         });
     })
