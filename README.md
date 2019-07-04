@@ -24,4 +24,4 @@ We want our code to have operations of a constant time cost or maybe logarithmic
 My shuffle algorithm seems to have a linear performance time linear for the arrays of size < 505 000
 and then the executions time seems to grow more quickly.
 
-![ShuffleScreenshot](https://github.com/AnnaWeakclaw/javaBenchmarking/tree/master/src/main/resources/public/ShuffleScreenshot.png)
+![ShuffleScreenshot](/src/main/resources/public/ShuffleScreenshot.png)
