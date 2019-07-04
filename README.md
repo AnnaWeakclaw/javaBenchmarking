@@ -25,3 +25,28 @@ My shuffle algorithm seems to have a linear performance time linear for the arra
 and then the executions time seems to grow more quickly.
 
 ![ShuffleScreenshot](/src/main/resources/public/ShuffleScreenshot.png)
+
+---
+My implementation of `reverse` method:
+```java
+public ArrayList myReverse(ArrayList durations) {
+        int nrOfElementsInArray = durations.size();
+        int mySize = (nrOfElementsInArray % 2 == 0) ? nrOfElementsInArray / 2 : Math.round(nrOfElementsInArray / 2);
+
+    for (int i = 0; i < mySize ; i++)
+        {
+            int forSwap = (int) durations.get(i);
+            int valueOfTheElementFromTheEnd = (int) durations.get((nrOfElementsInArray - 1)- i);
+            durations.set(i, valueOfTheElementFromTheEnd);
+            durations.set(nrOfElementsInArray - 1 - i, forSwap);
+        }
+
+        return durations;
+    }
+
+```
+I think it has a linear complexity of O(n).
+My time graph:
+![MyReverse](/src/main/resources/public/AnnasReverse.png)
+Inbuilt reverse method:
+![JavaReverse](/src/main/resources/public/ReverseJava.png)
