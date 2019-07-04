@@ -39,10 +39,11 @@ public class FindTime {
 //        System.out.println(myArrays.giveMedianForArraySizes(5000, 100000, 10000, effectiveAlgorithms));
 
         HashMap trialData = myArrays.giveMedianForArraySizes(5000, 1000000, 100000, effectiveAlgorithms);
-
-        returnMyJson(trialData);
+        System.out.println("R-------------------");
+//effectiveAlgorithms.testMethod(array);
         //how do I wait for the file to be updated?
         get("/hello", "application/json", (request, response) -> {
+            returnMyJson(trialData);
             response.redirect("/index.html");
             return null;
         });
