@@ -46,7 +46,7 @@ public ArrayList myReverse(ArrayList durations) {
 
 ```
 I think it has a linear complexity of O(n).
-My time graph:
+### My time graph:
 ![MyReverse](/src/main/resources/public/AnnasReverse.png)
-Inbuilt reverse method:
+### Inbuilt reverse method:
 ![JavaReverse](/src/main/resources/public/ReverseJava.png)
